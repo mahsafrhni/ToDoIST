@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.todoist">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.dena.todolist">
 
     <application
         android:allowBackup="true"
@@ -8,9 +9,14 @@
         android:label="@string/ToDoList"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".TasksActivity"></activity>
-        <activity android:name=".MainActivity" />
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+    <activity android:name=".TasksActivity"></activity>
+        <activity android:name=".RegisterActivity"></activity>
+    <activity android:name=".StartActivity" />
+        <activity android:name=".LoginActivity"
+            tools:ignore="DuplicateActivity" />
+
         <activity
             android:name=".SplashActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
@@ -20,7 +26,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterActivity" />
     </application>
 
 </manifest>
