@@ -1,4 +1,4 @@
-package com.example.dena.todolist;
+package com.example.todoist;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -10,15 +10,15 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class LoginActivity extends AppCompatActivity  {
-    Button b1,b2;
-    EditText ed1,ed2;
+public class LoginActivity extends AppCompatActivity {
+    Button b1, b2;
+    EditText ed1, ed2;
     TextView tx1;
     int counter = 3;
 
-    public LoginActivity(Intent i) {
-        
-    }
+//    public LoginActivity(Intent i) {
+//
+//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,21 +27,19 @@ public class LoginActivity extends AppCompatActivity  {
         b1 = findViewById(R.id.button);
         ed1 = findViewById(R.id.editText);
         ed2 = findViewById(R.id.editText2);
-
         b2 = findViewById(R.id.button2);
         tx1 = findViewById(R.id.textView3);
         tx1.setVisibility(View.GONE);
-
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 login();
-                if(ed1.getText().toString().equals("admin") &&
+                if (ed1.getText().toString().equals("admin") &&
                         ed2.getText().toString().equals("admin")) {
                     Toast.makeText(getApplicationContext(),
-                            "Redirecting...",Toast.LENGTH_SHORT).show();
-                }else{
-                    Toast.makeText(getApplicationContext(), "Wrong Credentials",Toast.LENGTH_SHORT).show();
+                            "Redirecting...", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), "Wrong Credentials", Toast.LENGTH_SHORT).show();
 
                             tx1.setVisibility(View.VISIBLE);
                     tx1.setBackgroundColor(Color.RED);
@@ -65,12 +63,12 @@ public class LoginActivity extends AppCompatActivity  {
 
     public void login() {
 
-        if(ed1.getText().toString().equals("admin") &&
+        if (ed1.getText().toString().equals("admin") &&
                 ed2.getText().toString().equals("admin")) {
             Toast.makeText(getApplicationContext(),
-                    "Redirecting...",Toast.LENGTH_SHORT).show();
-        }else{
-            Toast.makeText(getApplicationContext(), "Wrong Credentials",Toast.LENGTH_SHORT).show();
+                    "Redirecting...", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(getApplicationContext(), "Wrong Credentials", Toast.LENGTH_SHORT).show();
 
             tx1.setVisibility(View.VISIBLE);
             tx1.setBackgroundColor(Color.RED);

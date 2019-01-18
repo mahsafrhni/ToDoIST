@@ -1,4 +1,4 @@
-package com.example.dena.todolist;
+package com.example.todoist;
 
 import android.content.Intent;
 import android.os.Handler;
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.todoist.R;
 
 public class StartActivity extends AppCompatActivity {
 
@@ -29,7 +31,7 @@ public class StartActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         Intent i = new Intent(StartActivity.this, LoginActivity.class);
-                        new LoginActivity(i);
+                        new LoginActivity();
                         finish();
                     }
                 }, 0);
@@ -43,7 +45,7 @@ public class StartActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         Intent i = new Intent(StartActivity.this, RegisterActivity.class);
-                        new RegisterActivity(i);
+                        new RegisterActivity();
                         finish();
                     }
                 }, 0);

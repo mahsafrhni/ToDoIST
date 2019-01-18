@@ -1,4 +1,4 @@
-package com.example.dena.todolist;
+package com.example.todoist;
 
 import android.content.Intent;
 import android.os.Handler;
@@ -17,9 +17,9 @@ public class RegisterActivity extends AppCompatActivity {
     RadioButton normal, silver, golden;
     TextView tx1;
 
-    public RegisterActivity(Intent i) {
-
-    }
+//    public RegisterActivity(Intent i) {
+//
+//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
