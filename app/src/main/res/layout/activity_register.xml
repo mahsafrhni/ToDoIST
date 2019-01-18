@@ -7,17 +7,14 @@
     android:layout_height="match_parent"
     tools:context=".RegisterActivity">
 
-    android:paddingLeft= "15dp"
-    android:paddingRight = "15dp"
-    android:paddingTop = "15dp"
-    android:paddingBottom = "15dp">
-
-    <TextView android:text = "Login" android:layout_width="wrap_content"
-        android:layout_height = "wrap_content"
-        android:id = "@+id/textview"
-        android:textSize = "35dp"
-        android:layout_alignParentTop = "true"
-        android:layout_centerHorizontal = "true" />
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Register"
+        android:textSize="35dp" />
 
     <EditText
         android:id="@+id/name"
@@ -26,15 +23,19 @@
         android:layout_below="@+id/imageView"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
-        android:layout_marginTop="292dp"
+        android:layout_marginTop="61dp"
         android:layout_marginEnd="0dp"
         android:layout_marginRight="0dp"
         android:focusable="true"
         android:hint="Name"
+        android:src="@drawable/logo"
+        android:textColor="@color/colorAccent"
         android:textColorHighlight="#ff7eff15"
         android:textColorHint="#ffff25e6" />
 
@@ -45,15 +46,19 @@
         android:layout_below="@+id/imageView"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
-        android:layout_marginTop="336dp"
+        android:layout_marginTop="128dp"
         android:layout_marginEnd="0dp"
         android:layout_marginRight="0dp"
         android:focusable="true"
         android:hint="Family Name"
+        android:src="@drawable/logo"
+        android:textColor="@color/colorAccent"
         android:textColorHighlight="#ff7eff15"
         android:textColorHint="#ffff25e6" />
 
@@ -64,64 +69,72 @@
         android:layout_below="@+id/imageView"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
-        android:layout_marginTop="377dp"
+        android:layout_marginTop="257dp"
         android:layout_marginEnd="0dp"
         android:layout_marginRight="0dp"
         android:focusable="true"
         android:hint="example@email.com"
+        android:src="@drawable/logo"
+        android:textColor="@color/colorAccent"
         android:textColorHighlight="#ff7eff15"
         android:textColorHint="#ffff25e6" />
 
-    <ImageView
-        android:id="@+id/imageView"
+    <EditText
+        android:id="@+id/username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="95dp"
-        android:src="@drawable/logo" />
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="195dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:focusable="true"
+        android:hint="Username"
+        android:src="@drawable/logo"
+        android:textColor="@color/colorAccent"
+        android:textColorHighlight="#ff7eff15"
+        android:textColorHint="#ffff25e6" />
 
     <EditText
+        android:id="@+id/password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id = "@+id/password"
-        android:layout_below="@+id/editText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/editText"
+        android:layout_below="@+id/imageView"
         android:layout_alignEnd="@+id/editText"
-        android:textColorHint="#ffff299f"
-        android:hint="Password" />
-
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Attempts Left:"
-        android:id="@+id/textView2"
-        android:layout_below="@+id/editText2"
-        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/editText"
         android:layout_alignParentStart="true"
-        android:textSize="25dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/textView3"
-        android:layout_alignTop="@+id/textView2"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignBottom="@+id/textView2"
-        android:layout_toEndOf="@+id/textview"
-        android:textSize="25dp"
-        android:layout_toRightOf="@+id/textview" />
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="319dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:ems="10"
+        android:focusable="true"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:singleLine="false"
+        android:src="@drawable/logo"
+        android:textColor="@color/colorAccent"
+        android:textColorHighlight="#ff7eff15"
+        android:textColorHint="#ffff299f" />
 
     <Button
         android:layout_width="wrap_content"
@@ -140,4 +153,36 @@
         android:layout_alignParentBottom="true"
         android:layout_toRightOf="@+id/textview"
         android:layout_toEndOf="@+id/textview" />
+
+    <RadioButton
+        android:id="@+id/normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginBottom="80dp"
+        android:text="Normal" />
+
+    <RadioButton
+        android:id="@+id/silver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/normal"
+        android:layout_centerHorizontal="true"
+        android:text="Silver" />
+
+    <RadioButton
+        android:id="@+id/golden"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/normal"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="30dp"
+        android:text="Golden"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp" />
 </RelativeLayout>
