@@ -1,6 +1,6 @@
-package com.example.todoist;
+package com.example.dena.todolist;
 
-
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.graphics.Color;
@@ -15,6 +15,10 @@ public class LoginActivity extends AppCompatActivity  {
     EditText ed1,ed2;
     TextView tx1;
     int counter = 3;
+
+    public LoginActivity(Intent i) {
+        
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +43,7 @@ public class LoginActivity extends AppCompatActivity  {
                 }else{
                     Toast.makeText(getApplicationContext(), "Wrong Credentials",Toast.LENGTH_SHORT).show();
 
-                    tx1.setVisibility(View.VISIBLE);
+                            tx1.setVisibility(View.VISIBLE);
                     tx1.setBackgroundColor(Color.RED);
                     counter--;
                     tx1.setText(Integer.toString(counter));
