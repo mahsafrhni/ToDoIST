@@ -1,17 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_splash"
+<?xml version = "1.0" encoding = "utf-8"?>
+<RelativeLayout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".SplashActivity"
-    android:background="#b3b3b3"
-    android:orientation="vertical">
+    android:layout_height = "match_parent"
+    android:paddingLeft= "15dp"
+    android:paddingRight = "15dp"
+    android:paddingTop = "15dp"
+    android:paddingBottom = "15dp">
 
-    <ImageView
+    <TextView
+        android:id="@+id/splash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:src="@drawable/splash"/>
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="381dp"
+        android:text="Please wait..."
+        android:textSize="35dp" />
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="133dp"
+        android:src="@drawable/logo"
+        android:textSize="35dp" />
+</RelativeLayout>
