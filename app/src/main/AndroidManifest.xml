@@ -6,9 +6,12 @@
         android:allowBackup="true"
         android:icon="@drawable/icon"
         android:label="@string/ToDoList"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".StartActivity"></activity>
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".TasksActivity"></activity>
         <activity
             android:name=".SplashActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
@@ -17,11 +20,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".StartActivity"/>
-        <activity android:name=".RegisterActivity"/>
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".TasksActivity" >
-    </activity>
     </application>
 
 </manifest>
