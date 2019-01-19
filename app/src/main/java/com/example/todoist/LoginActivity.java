@@ -1,6 +1,7 @@
 package com.example.todoist;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.graphics.Color;
@@ -34,32 +35,62 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 login();
-                if (ed1.getText().toString().equals("admin") &&
+
+                if (ed1.getText().toString().equals("asmin") &&
                         ed2.getText().toString().equals("admin")) {
                     Toast.makeText(getApplicationContext(),
                             "Redirecting...", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(getApplicationContext(), "Wrong Credentials", Toast.LENGTH_SHORT).show();
-
-                            tx1.setVisibility(View.VISIBLE);
+                    tx1.setVisibility(View.VISIBLE);
                     tx1.setBackgroundColor(Color.RED);
                     counter--;
                     tx1.setText(Integer.toString(counter));
-
                     if (counter == 0) {
                         b1.setEnabled(false);
                     }
                 }
-            }
-        });
 
-        b2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
+//                for (int i = 0; i < registrationNumber; i++) {
+//                    if (password.equals(people[i].getPassword()) &&
+//                            username.equals(people[i].getUsername())) {
+//                        System.out.println("Welcome to the system " + people[i].getUsername() + "!");
+//                        signedIn = true;
+//                        register.setOnClickListener(new View.OnClickListener() {
+//                            @Override
+//                            public void onClick(View v) {
+//                                new Handler().postDelayed(new Runnable() {
+//                                    @Override
+//                                    public void run() {
+//                                        Intent i = new Intent(RegisterActivity.this, TasksActivity.class);
+//                                        startActivity(i);
+//                                        finish();
+//                                    }
+//                                }, 0);
+//                            }
+//                        });
+//
+//                    } else {
+//                        signedIn = false;
+//                    }
+//                }
+//                if (!signedIn) {
+//                    System.out.println("Username or Password is wrong!, try again");
+//                    signin();
+//                }
             }
-        });
+
+    });
+
+        b2.setOnClickListener(new View.OnClickListener()
+
+    {
+        @Override
+        public void onClick (View v){
+        finish();
     }
+    });
+}
 
     public void login() {
 
@@ -80,15 +111,4 @@ public class LoginActivity extends AppCompatActivity {
             }
         }
     }
-//    public void login() {
-//        try {
-//            dataOutputStream.writeUTF(String.valueOf(ed1));
-//            dataOutputStream.writeUTF(String.valueOf(ed2));
-//            dataInputStream.readUTF();
-//            String read = dataInputStream.readUTF();
-//            System.out.println(read);
-//        } catch (IOException e) {
-//            System.out.println(e.getMessage());
-//        }
-//    }
 }

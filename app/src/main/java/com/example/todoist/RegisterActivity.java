@@ -11,15 +11,18 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 public class RegisterActivity extends AppCompatActivity {
-
     Button cancel, register;
     EditText username, email, name, family_name, password;
     RadioButton normal, silver, golden;
     TextView tx1;
-
-//    public RegisterActivity(Intent i) {
+//   public final int registrationNumber = 1;
+    //    public RegisterActivity(Intent i) {
 //
-//    }
+////    }
+//    public boolean signedIn = false;
+//    public final int SIZEofPerson = 100;
+//    public Person[] people = new Person[SIZEofPerson];
+//    public Person person = new Person(username, password, name, family_name, email);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,10 +38,8 @@ public class RegisterActivity extends AppCompatActivity {
         normal = findViewById(R.id.normal);
         silver = findViewById(R.id.silver);
         golden = findViewById(R.id.golden);
-
         tx1 = findViewById(R.id.textView3);
         tx1.setVisibility(View.GONE);
-
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,9 +48,23 @@ public class RegisterActivity extends AppCompatActivity {
                 name.getText().toString();
                 family_name.getText().toString();
                 password.getText().toString();
+                Person user = new Person(username, password, name, family_name, email);
+                user.setUsername(username);
             }
         });
-
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Intent i = new Intent(RegisterActivity.this, StartActivity.class);
+                        startActivity(i);
+                        finish();
+                    }
+                }, 0);
+            }
+        });
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,6 +78,11 @@ public class RegisterActivity extends AppCompatActivity {
                 }, 0);
             }
         });
+
+
     }
+
 }
+
+
 
