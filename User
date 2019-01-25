@@ -1,0 +1,34 @@
+package com.company;
+
+public class User {
+
+    static String username;
+    static String password;
+    static String email;
+    static String name;
+    static String family_name;
+    static int numOfUsers = 0;
+    static int numOfTasks = 0;
+    boolean isNormal, isSilver, isGolden;
+
+    public User(ID id) {
+        this.username = id.userName;
+        this.password = id.passWord;
+        this.email = id.email;
+        this.name = id.name;
+        this.family_name = id.family;
+    }
+
+    public static User search(String username) {
+        for (int i = 0; i < numOfUsers; i++) {
+            if (Server.users.get(i).username.equals(username)) {
+                return Server.users.get(i);
+            }
+        }
+        return null;
+    }
+
+    public void user_ability() {
+        //to override
+    }
+}
