@@ -1,38 +1,24 @@
 package com.example.dena.todolist;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.TextView;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
+import android.widget.Toast;
+
 import java.io.IOException;
-import java.net.Socket;
 
 public class RegisterActivity extends AppCompatActivity {
 
     Button cancel, register;
     EditText username, email, name, family_name, password;
     RadioButton normal, silver, golden;
-    //TextView tx1;
-
-    TextView wrongUsername, wrongPassword, wrongEmail;
-    Socket socket;
-//    static Socket s;
-//    static DataInputStream dataInputStream;
-//    static DataOutputStream dataOutputStream;
-//    static String user_type;
-//    static String session;
-//    static boolean flag;
-//    static boolean isFlag;
-//    static boolean flag2;
+    RegisterServer registerServer;
+    boolean isCorrect;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,68 +35,63 @@ public class RegisterActivity extends AppCompatActivity {
         normal = findViewById(R.id.normal);
         silver = findViewById(R.id.silver);
         golden = findViewById(R.id.golden);
+        registerServer = new RegisterServer();
 
-        //if (qalat budan) {
-        wrongUsername = findViewById(R.id.wrongUsername);
-        wrongPassword = findViewById(R.id.wrongPassword);
-        wrongEmail = findViewById(R.id.wrongEmail);
-        //}
-
-
-//        tx1 = findViewById(R.id.textView3);
-//        tx1.setVisibility(View.GONE);
-
-        new RegisterServer().execute();
-
-        //  new a.execute();
+        final String Username = username.getText().toString();
+        final String Password = password.getText().toString();
+        final String Email = email.getText().toString();
+        final String Name = name.getText().toString();
+        final String Family_Name = family_name.getText().toString();
+        isCorrect = false;
 
 
 
-//        //check data
-//        flag = true;
-//        isFlag = true;
-//        flag2 = true;
-//        for (int i = 0; i < Server.username.size(); i++) {
-//            if (Server.username.get(i).equals(username)) {
-//                flag = false;
-//                wrongUsername = findViewById(R.id.wrongUsername);
-//                try {
-//                    throw new ExistingUserException("User Exists");
-//                } catch (ExistingUserException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        }
-//        //if (email should contains @ and .com) {
-//            isFlag = false;
-//        //}
-//        if (isFlag) {
-//            wrongEmail = findViewById(R.id.wrongEmail);
+        String read1 = null, read2 = null, read3 = null, read4 = null, read5 = null;
+//        while (!isCorrect) {
 //            try {
-//                throw new WrongEmailFormatException("Your email's format is wrong");
-//            } catch (WrongEmailFormatException e) {
+//                read1 = SplashActivity.dataInputStream.readUTF();
+//                read2 = SplashActivity.dataInputStream.readUTF();
+//                read3 = SplashActivity.dataInputStream.readUTF();
+//                read4 = SplashActivity.dataInputStream.readUTF();
+//                //read5 = SplashActivity.dataInputStream.readUTF();
+//            } catch (IOException e) {
 //                e.printStackTrace();
 //            }
-//        }
-//        if (flag && !isFlag) {
-//            try {
-//                dataOutputStream.writeUTF("you registered successfully");
-//            } catch (IOException e) {
-//                System.out.println(e.getMessage());
+//            if (read1.equals("Null")) {
+//                isCorrect = false;
+//                Toast.makeText(getApplicationContext(), "You must complete all the fields", Toast.LENGTH_SHORT).show();
+//            }
+//            if (read2.equals("repeatedUsername")) {
+//                isCorrect = false;
+//                Toast.makeText(getApplicationContext(), "this username is already taken", Toast.LENGTH_SHORT).show();
+//            }
+//            if (read3.equals("repeatedEmail")) {
+//                isCorrect = false;
+//                Toast.makeText(getApplicationContext(), "this email is already taken", Toast.LENGTH_SHORT).show();
+//            }
+//            if (read4.equals("wrongEmailFormat")) {
+//                isCorrect = false;
+//                Toast.makeText(getApplicationContext(), "Your email's format is wrong", Toast.LENGTH_SHORT).show();
+//            }
+////            if (read5.equals("wrongPasswordFormat")) {
+////                isCorrect = false;
+////                Toast.makeText(getApplicationContext(), "Your password's format is wrong", Toast.LENGTH_SHORT).show();
+////            }
+//            if (read1.equals("nNull") && read2.equals("nRepeatedUsername") && read3.equals("nRepeatedEmail") && read4.equals("nWrongEmailFormat")) {
+//                isCorrect = true;
+//                Toast.makeText(getApplicationContext(), "Registered successfully", Toast.LENGTH_SHORT).show();
 //            }
 //        }
-//        //if (password with correct format) {
-//            flag2 = false;
-//        //}
-//        if (flag2) {
-//            wrongPassword = findViewById(R.id.wrongPassword);
-//        }
-
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //
+                registerServer.execute(Username, Password, Email, Name, Family_Name);
+                if (isCorrect) {
+                    startActivity(new Intent(RegisterActivity.this, AddTask.class));
+                } else {
+                    Toast.makeText(getApplicationContext(), "You need to correct your information first", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -123,63 +104,42 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
 
+    private class RegisterServer extends AsyncTask <String, String, String> {
 
-    private static class RegisterServer extends AsyncTask<String, String, String> {
-
-        private String resp;
-//        ProgressDialog progressDialog;
-
-        DataOutputStream dataOutputStream;
-        DataInputStream dataInputStream;
-        Socket socket;
+        String isSuccessful;
 
         @Override
-        protected String doInBackground(String... params) {
-            publishProgress("Sleeping..."); // Calls onProgressUpdate()
+        protected String doInBackground(String... data) {
             try {
-                socket = new Socket("172.20.10.2", 1234);
-                dataOutputStream = new DataOutputStream(socket.getOutputStream());
-                dataInputStream = new DataInputStream(socket.getInputStream());
+                SplashActivity.dataOutputStream.writeUTF(data[0]);
+                SplashActivity.dataOutputStream.flush();
+                SplashActivity.dataOutputStream.writeUTF(data[1]);
+                SplashActivity.dataOutputStream.flush();
+                SplashActivity.dataOutputStream.writeUTF(data[2]);
+                SplashActivity.dataOutputStream.flush();
+                SplashActivity.dataOutputStream.writeUTF(data[3]);
+                SplashActivity.dataOutputStream.flush();
+                SplashActivity.dataOutputStream.writeUTF(data[4]);
+                SplashActivity.dataOutputStream.flush();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            RegisterActivity registerActivity = new RegisterActivity();
-            String Username = registerActivity.username.getText().toString();
-            String Password = registerActivity.password.getText().toString();
-            String Email = registerActivity.email.getText().toString();
-            String Name = registerActivity.name.getText().toString();
-            String Family_Name = registerActivity.family_name.getText().toString();
-            try {
-                dataOutputStream.writeUTF(Username);
-                dataOutputStream.writeUTF(Password);
-                dataOutputStream.writeUTF(Email);
-                dataOutputStream.writeUTF(Name);
-                dataOutputStream.writeUTF(Family_Name);
-                dataInputStream.readUTF();
-                String read = dataInputStream.readUTF();
-                System.out.println(read);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            return resp;
+            return isSuccessful;
         }
-
 
         @Override
         protected void onPostExecute(String result) {
-
+            //
         }
-
 
         @Override
         protected void onPreExecute() {
-
+            //
         }
-
 
         @Override
         protected void onProgressUpdate(String... text) {
-
+            //
         }
     }
 }
