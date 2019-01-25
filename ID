@@ -1,0 +1,9 @@
+package com.company;
+
+class ID {
+    String userName;
+    String passWord;
+    String name;
+    String family;
+    String email;
+}
