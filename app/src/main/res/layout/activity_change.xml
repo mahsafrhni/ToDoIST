@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    tools:context=".ChangeActivity">
+
+
+
+    <TextView
+
+        android:id="@+id/changepass"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentTop="true"
+
+        android:layout_centerHorizontal="true"
+
+        android:text="Change Information"
+
+        android:textSize="35dp" />
+
+
+
+    <EditText
+
+        android:id="@+id/olduser"
+
+        android:layout_width="336dp"
+
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/imageView"
+
+        android:layout_alignParentStart="true"
+
+        android:layout_alignParentLeft="true"
+
+        android:layout_alignParentTop="true"
+
+        android:layout_alignParentEnd="true"
+
+        android:layout_alignParentRight="true"
+
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginStart="28dp"
+
+        android:layout_marginLeft="28dp"
+
+        android:layout_marginTop="50dp"
+
+        android:layout_marginEnd="20dp"
+
+        android:layout_marginRight="20dp"
+
+        android:focusable="true"
+
+        android:hint="Old USER"
+
+        android:src="@drawable/logo"
+
+        android:textColor="@color/colorAccent"
+
+        android:textColorHighlight="#6715ff"
+
+        android:textColorHint="#b477b4" />
+
+
+
+    <EditText
+
+        android:id="@+id/oldpass"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/imageView"
+
+        android:layout_alignParentStart="true"
+
+        android:layout_alignParentLeft="true"
+
+        android:layout_alignParentTop="true"
+
+        android:layout_alignParentEnd="true"
+
+        android:layout_alignParentRight="true"
+
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginStart="31dp"
+
+        android:layout_marginLeft="31dp"
+
+        android:layout_marginTop="107dp"
+
+        android:layout_marginEnd="17dp"
+
+        android:layout_marginRight="17dp"
+
+        android:focusable="true"
+
+        android:hint="Old pass"
+
+        android:src="@drawable/logo"
+
+        android:textColor="@color/colorAccent"
+
+        android:textColorHighlight="#6715ff"
+
+        android:textColorHint="#b477b4" />
+
+
+
+    <EditText
+
+        android:id="@+id/newuser"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/imageView"
+
+        android:layout_alignParentStart="true"
+
+        android:layout_alignParentLeft="true"
+
+        android:layout_alignParentTop="true"
+
+        android:layout_alignParentEnd="true"
+
+        android:layout_alignParentRight="true"
+
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginStart="35dp"
+
+        android:layout_marginLeft="35dp"
+
+        android:layout_marginTop="161dp"
+
+        android:layout_marginEnd="19dp"
+
+        android:layout_marginRight="19dp"
+
+        android:focusable="true"
+
+        android:hint="new user"
+
+        android:src="@drawable/logo"
+
+        android:textColor="@color/colorAccent"
+
+        android:textColorHighlight="#6715ff"
+
+        android:textColorHint="#b477b4" />
+
+
+
+    <EditText
+
+        android:id="@+id/newpass"
+
+        android:layout_width="335dp"
+
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/imageView"
+
+        android:layout_alignEnd="@+id/editText"
+
+        android:layout_alignRight="@+id/editText"
+
+        android:layout_alignParentStart="true"
+
+        android:layout_alignParentLeft="true"
+
+        android:layout_alignParentTop="true"
+
+        android:layout_alignParentEnd="true"
+
+        android:layout_alignParentRight="true"
+
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginStart="33dp"
+
+        android:layout_marginLeft="33dp"
+
+        android:layout_marginTop="261dp"
+
+        android:layout_marginEnd="16dp"
+
+        android:layout_marginRight="16dp"
+
+        android:ems="10"
+
+        android:focusable="true"
+
+        android:hint="new Password"
+
+        android:inputType="numberPassword"
+
+        android:singleLine="false"
+
+        android:src="@drawable/logo"
+
+        android:textColor="@color/colorAccent"
+
+        android:textColorHighlight="#6715ff"
+
+        android:textColorHint="#b477b4"
+
+        tools:ignore="UnknownId" />
+
+
+
+    <Button
+
+        android:id="@+id/donee"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginEnd="-2dp"
+
+        android:layout_marginRight="-2dp"
+
+        android:layout_marginBottom="19dp"
+
+        android:layout_toStartOf="@+id/textview"
+
+        android:layout_toLeftOf="@+id/textview"
+
+        android:text="Done" />
+
+
+    <Button
+
+        android:id="@+id/cancell"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginStart="-7dp"
+
+        android:layout_marginLeft="-7dp"
+
+        android:layout_marginBottom="60dp"
+
+        android:layout_toEndOf="@+id/textview"
+
+        android:layout_toRightOf="@+id/textview"
+
+        android:text="Cancel" />
+
+
+</RelativeLayout>
