@@ -1,0 +1,13 @@
+package com.company;
+
+public class SilverUser extends User {
+
+    public SilverUser(ID id) {
+        super(id);
+    }
+
+    @Override
+    public void user_ability() {
+
+    }
+}
