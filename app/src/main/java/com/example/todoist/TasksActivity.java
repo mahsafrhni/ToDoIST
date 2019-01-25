@@ -15,7 +15,7 @@ public class TasksActivity extends AppCompatActivity {
     ListView mList;
     ArrayList<Tasks> myTasks;
     FloatingActionButton add;
-    String nTitle, nDate, nPriority, nTime, nOther;
+    String nTitle=null, nDate=null, nPriority=null, nTime=null, nOther=null;
     // SparseBooleanArray sparseBooleanArray;
     Button change, logout;
 
