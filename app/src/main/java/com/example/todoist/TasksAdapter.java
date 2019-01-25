@@ -1,10 +1,9 @@
-package com.example.todoist;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -46,6 +45,7 @@ public class TasksAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         ViewHolder vHolder;
+        CheckBox cb = (CheckBox) view.findViewById(R.id.checkbox);
         if (view == null) {
             view = LayoutInflater.from(mContext).inflate(R.layout.list_item, viewGroup, false);
             vHolder = new ViewHolder(view);
@@ -60,8 +60,10 @@ public class TasksAdapter extends BaseAdapter {
         vHolder.txtTitle.setText(task.getTitle());
         vHolder.txtDate.setText(task.getDate().toString());
         vHolder.txtPriority.setText(task.getPriority());
+        if (tasks.get(i).getValue() == 1)
+            cb.setChecked(true);
+        else
+            cb.setChecked(false);
         return view;
-
     }
 }
-
