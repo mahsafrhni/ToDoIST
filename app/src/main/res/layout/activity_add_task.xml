@@ -144,88 +144,14 @@ tools:context=".RegisterActivity">
     android:textColorHighlight="#ff7eff15"
     android:textColorHint="#ffff299f" />
 
+    <Button
+        android:id="@+id/done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:backgroundTint="#00BCD4"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="Done" />
+
 </RelativeLayout>
-
-        android:id="@+id/date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_centerHorizontal="true"
-        android:focusable="true"
-        android:hint="e.g. Buy gift tommorow at 6pm p1"
-        android:src="@drawable/logo"
-        android:textColor="@color/colorAccent"
-        android:textColorHighlight="#ff7eff15"
-        android:textColorHint="#ffff25e6"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="91dp"
-        tools:layout_editor_absoluteY="131dp" />
-
-    <EditText
-        android:id="@+id/priority"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_centerHorizontal="true"
-        android:focusable="true"
-        android:hint="e.g. Buy gift tommorow at 6pm p1"
-        android:src="@drawable/logo"
-        android:textColor="@color/colorAccent"
-        android:textColorHighlight="#ff7eff15"
-        android:textColorHint="#ffff25e6"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="91dp"
-        tools:layout_editor_absoluteY="131dp" />
-
-    <EditText
-        android:id="@+id/other"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_centerHorizontal="true"
-        android:focusable="true"
-        android:hint="e.g. Buy gift tommorow at 6pm p1"
-        android:src="@drawable/logo"
-        android:textColor="@color/colorAccent"
-        android:textColorHighlight="#ff7eff15"
-        android:textColorHint="#ffff25e6"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="91dp"
-        tools:layout_editor_absoluteY="131dp" />
-
-    <EditText
-        android:id="@+id/add_task"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_centerHorizontal="true"
-        android:focusable="true"
-        android:hint="e.g. Buy gift tommorow at 6pm p1"
-        android:src="@drawable/logo"
-        android:textColor="@color/colorAccent"
-        android:textColorHighlight="#ff7eff15"
-        android:textColorHint="#ffff25e6"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="91dp"
-        tools:layout_editor_absoluteY="131dp" />
-</android.support.constraint.ConstraintLayout>
