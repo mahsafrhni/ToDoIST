@@ -2,9 +2,11 @@ package com.example.todoist;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -22,6 +24,7 @@ public class AddTask extends AppCompatActivity {
     final Calendar myCalendar = Calendar.getInstance();
     View view;
     TextView textView;
+    Button done;
     //    int currentHour;
 //    int currentMinute;
 //    String amPm;
@@ -41,6 +44,7 @@ public class AddTask extends AppCompatActivity {
         priority = findViewById(R.id.priority);
         other = findViewById(R.id.other);
         time = findViewById(R.id.time);
+        done = findViewById(R.id.done);
         String Title = title.getText().toString();
         String D = date.getText().toString();
         String Priority = priority.getText().toString();
@@ -48,6 +52,21 @@ public class AddTask extends AppCompatActivity {
         String Time = time.getText().toString();
 //        Tasks t = new Tasks(Title, D, Priority, Other);
 //        tasks.add(t);
+        //ersale maghadir be TasksActivity
+        Intent intent = new Intent(getApplicationContext(), TasksActivity.class);
+        intent.putExtra("Title", Title);
+        intent.putExtra("D", D);
+        intent.putExtra("Priority", Priority);
+        intent.putExtra("Time", Time);
+        intent.putExtra("Other", Other);
+        startActivity(intent);
+        done.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AddTask.this, TasksActivity.class));
+            }
+        });
+
         final DatePickerDialog.OnDateSetListener Date = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month,
@@ -99,3 +118,5 @@ public class AddTask extends AppCompatActivity {
 //        }
 
 }
+
+
