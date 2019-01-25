@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -18,7 +17,7 @@
 
     <EditText
         android:id="@+id/name"
-        android:layout_width="wrap_content"
+        android:layout_width="336dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView"
         android:layout_alignParentStart="true"
@@ -27,17 +26,17 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="61dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
         android:focusable="true"
         android:hint="Name"
         android:src="@drawable/logo"
         android:textColor="@color/colorAccent"
-        android:textColorHighlight="#ff7eff15"
-        android:textColorHint="#ffff25e6" />
+        android:textColorHighlight="#6715ff"
+        android:textColorHint="#b477b4" />
 
     <EditText
         android:id="@+id/family_name"
@@ -50,40 +49,17 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="128dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginTop="107dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
         android:focusable="true"
         android:hint="Family Name"
         android:src="@drawable/logo"
         android:textColor="@color/colorAccent"
-        android:textColorHighlight="#ff7eff15"
-        android:textColorHint="#ffff25e6" />
-
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="257dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp"
-        android:focusable="true"
-        android:hint="example@email.com"
-        android:src="@drawable/logo"
-        android:textColor="@color/colorAccent"
-        android:textColorHighlight="#ff7eff15"
-        android:textColorHint="#ffff25e6" />
+        android:textColorHighlight="#6715ff"
+        android:textColorHint="#b477b4" />
 
     <EditText
         android:id="@+id/username"
@@ -96,21 +72,21 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="195dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="161dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginRight="19dp"
         android:focusable="true"
         android:hint="Username"
         android:src="@drawable/logo"
         android:textColor="@color/colorAccent"
-        android:textColorHighlight="#ff7eff15"
-        android:textColorHint="#ffff25e6" />
+        android:textColorHighlight="#6715ff"
+        android:textColorHint="#b477b4" />
 
     <EditText
         android:id="@+id/password"
-        android:layout_width="wrap_content"
+        android:layout_width="335dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView"
         android:layout_alignEnd="@+id/editText"
@@ -121,11 +97,11 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="319dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="261dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:ems="10"
         android:focusable="true"
         android:hint="Password"
@@ -133,26 +109,33 @@
         android:singleLine="false"
         android:src="@drawable/logo"
         android:textColor="@color/colorAccent"
-        android:textColorHighlight="#ff7eff15"
-        android:textColorHint="#ffff299f" />
+        android:textColorHighlight="#6715ff"
+        android:textColorHint="#b477b4"
+        tools:ignore="UnknownId" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Register"
         android:id="@+id/register"
-        android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/textview"
-        android:layout_toStartOf="@+id/textview" />
-
-    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cancel"
-        android:id="@+id/cancel"
         android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-2dp"
+        android:layout_marginRight="-2dp"
+        android:layout_marginBottom="19dp"
+        android:layout_toStartOf="@+id/textview"
+        android:layout_toLeftOf="@+id/textview"
+        android:text="Register" />
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-7dp"
+        android:layout_marginLeft="-7dp"
+        android:layout_marginBottom="19dp"
+        android:layout_toEndOf="@+id/textview"
         android:layout_toRightOf="@+id/textview"
-        android:layout_toEndOf="@+id/textview" />
+        android:text="Cancel" />
 
     <RadioButton
         android:id="@+id/normal"
@@ -161,17 +144,18 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="29dp"
-        android:layout_marginLeft="29dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginBottom="115dp"
         android:text="Normal" />
 
     <RadioButton
         android:id="@+id/silver"
-        android:layout_width="wrap_content"
+        android:layout_width="86dp"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/normal"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="1dp"
         android:text="Silver" />
 
     <RadioButton
@@ -180,9 +164,40 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/normal"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="30dp"
-        android:text="Golden"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="30dp" />
+        android:layout_marginTop="-1dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginRight="54dp"
+        android:text="Golden" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="338dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username"
+        android:layout_alignEnd="@+id/silver"
+        android:layout_alignRight="@+id/silver"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="-134dp"
+        android:layout_marginRight="-134dp"
+        android:ems="10"
+        android:hint="Example@email.com"
+        android:inputType="textEmailAddress"
+        android:textColorHighlight="#6715ff"
+        android:textColorHint="#b477b4" />
+
+    <TextView
+        android:id="@+id/user_type"
+        android:layout_width="127dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="156dp"
+        android:text="User Type :"
+        android:textAllCaps="true"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 </RelativeLayout>
