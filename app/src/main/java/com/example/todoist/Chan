@@ -1,0 +1,50 @@
+package com.example.todoist;
+
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+
+public class ChangeActivity extends AppCompatActivity {
+    EditText olduser, oldpass, newuser, newpass;
+    Button done, cancell;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_change);
+        olduser = findViewById(R.id.olduser);
+        oldpass = findViewById(R.id.oldpass);
+        newpass = findViewById(R.id.newpass);
+        newuser = findViewById(R.id.newuser);
+        done = findViewById(R.id.donee);
+        cancell = findViewById(R.id.cancell);
+
+        done.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+
+            public void onClick(View v) {
+
+                startActivity(new Intent(ChangeActivity.this, TasksActivity.class));
+
+            }
+
+        });
+        cancell.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+
+            public void onClick(View v) {
+
+                startActivity(new Intent(ChangeActivity.this, TasksActivity.class));
+
+            }
+
+        });
+    }
+}
